@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy walut</title>
+    <script src="skrypt.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Obliczanie kursu waluty</h1>
+    </header>
+    <main>
+        <h3>Podaj ilość złotych</h3>
+        <label for="ilosc">Podaj kwotę</label>
+        <input name="ilosc" id="ilosc" type="number">
+        <br>
+        <label for="rodzaj">Wybierz rodzaj waluty</label>
+        <select name="rodzaj" id="rodzaj">
+            <option value="EUR">Euro</option>
+            <option value="USD">Dolar</option>
+            <option value="GBP">Funt</option>
+        </select>
+        <button type="submit" onClick="oblicz()">Przelicz</button>
+        <p><output id="wynik"></output></p>
+    </main>
+    <section>
+
+    </section>
+    <footer>
+        <p>Strona wykonał Łukasz K</p>
+    </footer>
+</body>
+</html>
