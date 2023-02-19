@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszt paliwa</title>
+    <script src="skrypt.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Obliczanie kosztów paliwa</h1>
+    </header>
+    <main>
+        <h3>Podaj dane dotyczące tankowania</h3>
+        <label for="ilosc">Podaj ilosc zatankowanego paliwa</label>
+        <input name="ilosc" id="ilosc" type="number">
+        <br>
+        <label for="rodzaj">Wybierz rodzaj paliwa</label>
+        <select name="rodzaj" id="rodzaj">
+            <option value="benzyna95">Benzyna 95</option>
+            <option value="benzyna98">Benzyna 98</option>
+            <option value="lpg">LPG</option>
+            <option value="olej">Olej napędowy</option>
+        </select>
+        <button type="submit" onClick="oblicz()">Oblicz koszt</button>
+        <p><output id="wynik"></output></p>
+    </main>
+    <section>
+
+    </section>
+    <footer>
+        <p>Strona wykonał Łukasz K</p>
+    </footer>
+</body>
+</html>
