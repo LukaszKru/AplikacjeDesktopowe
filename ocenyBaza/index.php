@@ -24,7 +24,12 @@
         }else{
             echo "nie gut";
         }
+        mysqli_close($connect);
         ?>
+        <label for="przedmiot">Wybierz przedmiot</label>
+        <select name="przedmiot" id="przedmiot">
+            
+        </select>
     </main>
     <footer>
         <p>Stronę wykonał Łukasz Krupa</p>
