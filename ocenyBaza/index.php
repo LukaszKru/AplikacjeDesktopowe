@@ -14,7 +14,6 @@
         <?php
         $connect=mysqli_connect("localhost","root","","4ti");
         if($connect){
-            echo "Gut";
             $zapytanie="SELECT * FROM przedmiot";
             $wynik=mysqli_query($connect,$zapytanie);
             while($wiersz=mysqli_fetch_array($wynik)){
@@ -24,11 +23,34 @@
         }else{
             echo "nie gut";
         }
+        if($connect){
+            $zapytanie1="SELECT * FROM dane";
+            $wynik=mysqli_query($connect,$zapytanie1);
+            while($wiersz=mysqli_fetch_array($wynik)){
+                $iduczen[]=$wiersz['id'];
+                $imie[]=$wiersz['imie'];
+                $nazwisko[]=$wiersz['nazwisko'];
+            }
+        }else{
+            echo "nie gut";
+        }
         mysqli_close($connect);
         ?>
         <label for="przedmiot">Wybierz przedmiot</label>
         <select name="przedmiot" id="przedmiot">
-            
+            <?php 
+                for($i=0;$i<count($przedmiot);$i++){
+                    echo "<option value=$idprzedmiot[$i]> $przedmiot[$i]</option>";
+                }
+            ?>
+        </select>
+        <label for="uczen">Wybierz ucznia</label>
+        <select name="uczen" id="uczen">
+            <?php 
+                for($i=0;$i<count($iduczen);$i++){
+                    echo "<option value=$iduczen[$i]> $imie[$i] $nazwisko[$i]</option>";
+                }
+            ?>
         </select>
     </main>
     <footer>
